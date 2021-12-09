@@ -95,19 +95,22 @@ body{
 	float: right;
 	position: absolute;
 	top: 14px;
-	left: 180px;
+	/*left: 180px;*/
+	left: 120px;
 	text-shadow: 1px 1px 0px #000;
 	font-size: 36px;
 	font-style: italic;
 	font-family: ethno, sans-serif;
 	font-weight: normal;
 }
+
 #ii{
 	font-size: 60px;
 	font-family: LeagueGothic, sans-serif;
 	font-weight: bold;
 	position: absolute;
-	left: 169px;
+	/*left: 169px;*/
+	left: 100px;
 	top: -3px;
 	color: #b82924;
 	display: block;
