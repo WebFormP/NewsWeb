@@ -35,3 +35,24 @@ On passe ensuite à la CSS
 - on adapte les boutons "En savoir plus..."
 - on adapte les articles en les répartissant sur toute la largeur
 - on centre le footer
+
+## Tablette
+
+On réalise la mise en page avec CSS Grid
+- le logo reste au-dessus
+- le menu devient vertical à gauche
+- les articles sont placés à droite du menu
+- le 1er article (le plus récent) occupe toute la largeur restante à côté du menu
+- les 2è et 3è articles les plus récents se répartissent 50/50 la largeur sous le 1er article
+- le footer est tout en bas
+
+NB: on décide de ne plus afficher le slider
+
+## Smartphone
+
+On réalise la mise en page avec CSS Flexbox
+- Le logo et un menu hamburger au-dessus
+- les 3 articles en-dessous
+- le footer tout en bas
+
+NB: on décide de ne plus afficher le slider
