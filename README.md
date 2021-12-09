@@ -17,4 +17,3 @@ Un aperçu des mises en page peut être vu sur le fichier : DesignSite.png
 
 On part du fichier index.html d'origine et on le renomme index.html.original
 On fait une copie et on la renomme index_desktop.html
-
