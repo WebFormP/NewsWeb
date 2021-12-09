@@ -131,6 +131,7 @@ header h1{
 	width: 300px;
 	margin-bottom: 2px;
 }
+
 header h2{
 	font-size: 16px;
 	font-weight: normal;
@@ -139,18 +140,22 @@ header h2{
 	text-shadow: 1px 1px 0 #000;
 	text-transform: uppercase;
 }
+
 #tagline{
 		margin-top: -8px;
-}		
+}
+
 #logo, nav, nav li{
 	display: inline-block;
 	vertical-align: top;
 	*display: inline;
 	zoom:1;
 }
+
 #logo{
 	width: 270px;
 }
+
 nav a {
 	color: #fff;
 	font-family: LeagueGothic, sans-serif;
@@ -165,17 +170,21 @@ nav{
 	margin: 20px 4px 0 0;
 	float: right;
 }
+
 header{
 	margin-bottom: 25px;
 }
+
 #home a#homenav, #blog a#blognav, #fullwidth a#fullwidthnav, #contact a#contactnav{
 	color: #b82924;
 }
+
 /*************** B A N N E R    S T Y L E ******************/
 #banner{
 	position: relative;
 	margin-bottom: 30px;
 }
+
 #banneri{
 	position: absolute;
 	bottom: 15%;
@@ -184,9 +193,11 @@ header{
 	background-color: rgba(0,0,0,.8);
 	padding: 5px 10px;
 }
+
 #banner img{
 	box-shadow: 0 4px 6px #000;
 }
+
 #banner h1{
 	font-family: LeagueGothic, Impact, sans-serif;
 	font-weight: normal;
@@ -194,6 +205,7 @@ header{
 	text-shadow: 1px 1px 0px #000;
 	display: inline;
 }
+
 #banner .rm{
 	position: absolute;
 	color: #000;
@@ -212,22 +224,36 @@ header{
 	color: #f8f8f8;
 	text-shadow: 2px 2px 0 #000;
 	text-align:  center;
+
+	width:20%;		/* le titre occupe 20% de la largeur */
 }
+
 #line h1, .dline{
-	display: inline-block;
+/*	display: inline-block;
 	*display: inline;
 	zoom:1;
-	margin: 0 0 0 10px;
+	margin: 0 0 0 10px;*/
 }
+
 #line{
-		margin: 0 0 0 80px;
+/*	margin: 0 0 0 80px;*/
+	display: flex;				/* on aligne le titre et les 2 séparateurs avec flexbox */
+	flex-flow: row nowrap;		/* en horizontal et sur une ligne */
+	justify-content: center;	/* éléments centrés horizontalement */
+	align-items: center;		/* éléments centrés verticalement */
 }
+
 .dline{
-	width: 312px;
+/*	width: 312px;*/
+	width: 40%;		/* les 2 traits à gauche et à droite du titre se partagent les 80% restants (voir #line h1) */
+
 	height: 3px;
-	background: url('../images/bgdline.png') repeat-x ;
-	margin-bottom: 10px;
+	background-color: white;
+	/* remplacement de l'image de fond par la couleur pour plus de visibilité */
+	/*background: url('../images/bgdline.png') repeat-x ;*/
+	/*margin-bottom: 10px;*/
 }
+
 #ourserv article{
 	width: 275px;
 	display: inline-block;
@@ -236,6 +262,7 @@ header{
 	vertical-align: top;
 	margin: 0 38px 0 0;
 }
+
 #ourserv article h1, #latestp article h1{
 	font-family: LeagueGothic, sans-serif;
 	font-weight: normal;
@@ -243,17 +270,21 @@ header{
 	font-size: 22px;
 	margin-bottom: 5px;
 }
+
 .lastarticle{
 	margin:0;
 }
+
 #ourserv{
 	margin: 8px 0 15px 20px;
 	width: 100%;
 }
+
 #ourserv img, #latestp img{
 	margin-bottom: 5px;
     box-shadow: 0 4px 6px #000;
 }
+
 .rm{
 	color: #121212;
 	background-color: #F2F2F2;
@@ -267,6 +298,7 @@ header{
 	font-size: 18px;
 	border-radius: 2px;
 }
+
 .rm:hover{
 	background-color: #B82924;
 	color: #121212;
@@ -281,21 +313,25 @@ header{
 	text-shadow: 2px 2px 0 #000;
 	text-align:  center;
 }
+
 #sline h1, .sdline{
 	display: inline-block;
 	*display: inline;
 	zoom:1;
 	margin: 0 0 0 10px;
 }
+
 #sline{
 	margin: 20px 0 10px 80px;
 }
+
 .sdline{
 	width: 300px;
 	height: 2px;
 	background: url('../images/bgdline.png') repeat-x ;
 	margin-bottom: 10px;
 }
+
 #latestp article{
 	width: 210px;
 	display: inline-block;
@@ -303,6 +339,7 @@ header{
 	zoom:1;
 	margin-right: 20px;
 }
+
 #latestp{
 	margin-left: 20px;
 }
