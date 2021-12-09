@@ -23,3 +23,15 @@ On fait une copie et on la renomme index_desktop.html
 - on modifie les éléments du menu
 - on modifie dans la zone des articles, le titre principal, les titres des articles, les boutons "Read more"
 - on modifie le footer
+- on complète l'entête de page <head>
+
+On passe ensuite à la CSS
+
+- on modifie la largeur du wrapper global
+- on supprime la texture du fond et on remplace par une couleur de fond
+- on modifie le logo pour rapprocher les textes
+- on adapte le slider
+- on centre le titre "Nos derniers articles"
+- on adapte les boutons "En savoir plus..."
+- on adapte les articles en les répartissant sur toute la largeur
+- on centre le footer
