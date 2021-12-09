@@ -255,12 +255,13 @@ header{
 }
 
 #ourserv article{
-	width: 275px;
-	display: inline-block;
-	*display: inline;
-	zoom:1;
-	vertical-align: top;
-	margin: 0 38px 0 0;
+	/*width: 275px;*/
+	width: 33%;			/* les 3 articles se partagent toute la largeur */
+	/*display: inline-block;
+	*display: inline;*/
+	/*zoom:1;
+	vertical-align: top;*/
+	/*margin: 0 38px 0 0;*/
 }
 
 #ourserv article h1, #latestp article h1{
@@ -276,13 +277,23 @@ header{
 }
 
 #ourserv{
-	margin: 8px 0 15px 20px;
-	width: 100%;
+	/*margin: 8px 0 15px 20px;*/
+	/*width: 100%;*/
+
+	/* on aligne les 3 articles avec flexbox */
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	gap: 20px;
 }
 
 #ourserv img, #latestp img{
 	margin-bottom: 5px;
     box-shadow: 0 4px 6px #000;
+	
+	/* les images occupent toute la largeur */
+	width:100%;
+	height:auto;
 }
 
 .rm{
@@ -290,7 +301,8 @@ header{
 	background-color: #F2F2F2;
 	padding: 1px 4px;
 	display:block;
-	width: 58px;
+	/*width: 58px;*/
+	width: 33%;			/* le bouton "En savoir plus..." occupe le tiers de la largeur de l'article */
 	margin-top: 5px;
 	box-shadow: 0px 0px 3px #000;
 	font-family: LeagueGothic, sans-serif;
