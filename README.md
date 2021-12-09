@@ -17,3 +17,9 @@ Un aperçu des mises en page peut être vu sur le fichier : DesignSite.png
 
 On part du fichier index.html d'origine et on le renomme index.html.original
 On fait une copie et on la renomme index_desktop.html
+
+- on enlève la zone "Latest Projects" avant le footer
+- on modifie le texte du logo
+- on modifie les éléments du menu
+- on modifie dans la zone des articles, le titre principal, les titres des articles, les boutons "Read more"
+- on modifie le footer
