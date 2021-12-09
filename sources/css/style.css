@@ -541,5 +541,6 @@ input[type="submit"]:active{
 
 footer{
 	margin-top: 30px;
-	text-align: right;
+	/*text-align: right;*/
+	text-align: center;
 }
