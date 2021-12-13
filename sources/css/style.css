@@ -72,16 +72,18 @@ p{
 
 /************** G E N E R A L    S T Y L E ***************/
 #wrapper{
-	/*width: 950px;*/
-	width: 90%;
-	margin: 16px auto;
+	width: 100vw;				/* occupe toute la largeur d'écran */
+	/*margin: 16px auto;*/		/* pas besoin de centrer */
 	background-color: #121212;
-	padding: 20px 20px;
-	box-shadow: 0 4px 6px #000;
+	/*padding: 20px 20px;*/
+	/*box-shadow: 0 4px 6px #000;*/		/* pas d'ombre */
+
+	display:flex;
+	flex-flow: column nowrap;
+	align-items: center;
 }
 
 body{
-	/*background: url('../images/bg.png') repeat;*/
 	background-color: lightgray;
 	font-family: Source, Tahoma, sans-serif;
 	color: #fff;
@@ -118,6 +120,11 @@ body{
 	text-shadow: none;
 	font-style: italic;
 	letter-spacing: 2px;
+}
+
+/* masquer le slider pour les smartphones et tablettes */
+.slider-wrapper {
+	display:none;
 }
 
 /************* L O G O   &  N A V   B A R    S T Y L E ****************/
@@ -216,52 +223,14 @@ header{
 }
 
 /************* H O M E    C O N T E N T *******************/
-#line h1{
-	font-family: LeagueGothic, Impact, sans-serif;
-	font-weight: normal;
-	font-size: 30px;
-	text-transform: uppercase;
-	color: #f8f8f8;
-	text-shadow: 2px 2px 0 #000;
-	text-align:  center;
-
-	width:20%;		/* le titre occupe 20% de la largeur */
-}
 
 #line h1, .dline{
-/*	display: inline-block;
-	*display: inline;
-	zoom:1;
-	margin: 0 0 0 10px;*/
+	display: none;
 }
 
-#line{
-/*	margin: 0 0 0 80px;*/
-	display: flex;				/* on aligne le titre et les 2 séparateurs avec flexbox */
-	flex-flow: row nowrap;		/* en horizontal et sur une ligne */
-	justify-content: center;	/* éléments centrés horizontalement */
-	align-items: center;		/* éléments centrés verticalement */
-}
-
-.dline{
-/*	width: 312px;*/
-	width: 40%;		/* les 2 traits à gauche et à droite du titre se partagent les 80% restants (voir #line h1) */
-
-	height: 3px;
-	background-color: white;
-	/* remplacement de l'image de fond par la couleur pour plus de visibilité */
-	/*background: url('../images/bgdline.png') repeat-x ;*/
-	/*margin-bottom: 10px;*/
-}
 
 #ourserv article{
-	/*width: 275px;*/
-	width: 33%;			/* les 3 articles se partagent toute la largeur */
-	/*display: inline-block;
-	*display: inline;*/
-	/*zoom:1;
-	vertical-align: top;*/
-	/*margin: 0 38px 0 0;*/
+	width: 90vw;			/* l'article occupe presque toute la largeur */
 }
 
 #ourserv article h1, #latestp article h1{
@@ -277,13 +246,10 @@ header{
 }
 
 #ourserv{
-	/*margin: 8px 0 15px 20px;*/
-	/*width: 100%;*/
-
-	/* on aligne les 3 articles avec flexbox */
+	/* on aligne les 3 articles avec flexbox - VERTICALEMENT*/
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
 	gap: 20px;
 }
 
@@ -543,4 +509,104 @@ footer{
 	margin-top: 30px;
 	/*text-align: right;*/
 	text-align: center;
+}
+
+/************** MEDIA - QUERIES **********************************/
+
+/*********************** TABLETTE *****************************/
+@media screen and (min-width:600px) {
+	#wrapper{
+	}
+}
+
+/*********************** DESKTOP ******************************/
+@media screen and (min-width:1024px) {
+	#wrapper{
+		width: 90%;
+		margin: 16px auto;
+		box-shadow: 0 4px 6px #000;
+	}
+
+	/* afficher le slider en mode desktop */
+	.slider-wrapper {
+		display:block;
+	}
+
+	/************* H O M E    C O N T E N T *******************/
+#line h1{
+	font-family: LeagueGothic, Impact, sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #f8f8f8;
+	text-shadow: 2px 2px 0 #000;
+	text-align:  center;
+
+	width:20%;		/* le titre occupe 20% de la largeur */
+}
+
+#line h1, .dline{
+/*	display: inline-block;
+	*display: inline;
+	zoom:1;
+	margin: 0 0 0 10px;*/
+}
+
+#line{
+/*	margin: 0 0 0 80px;*/
+	display: flex;				/* on aligne le titre et les 2 séparateurs avec flexbox */
+	flex-flow: row nowrap;		/* en horizontal et sur une ligne */
+	justify-content: center;	/* éléments centrés horizontalement */
+	align-items: center;		/* éléments centrés verticalement */
+}
+
+.dline{
+/*	width: 312px;*/
+	width: 40%;		/* les 2 traits à gauche et à droite du titre se partagent les 80% restants (voir #line h1) */
+
+	height: 3px;
+	background-color: white;
+	/* remplacement de l'image de fond par la couleur pour plus de visibilité */
+	/*background: url('../images/bgdline.png') repeat-x ;*/
+	/*margin-bottom: 10px;*/
+}
+
+
+#ourserv article{
+	width: 33%;			/* Les 3 articles se partagent toute la largeur */
+}
+
+#ourserv article h1, #latestp article h1{
+	font-family: LeagueGothic, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+
+.lastarticle{
+	margin:0;
+}
+
+#ourserv{
+	/*margin: 8px 0 15px 20px;*/
+	/*width: 100%;*/
+
+	/* on aligne les 3 articles avec flexbox */
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	gap: 20px;
+}
+
+#ourserv img, #latestp img{
+	margin-bottom: 5px;
+    box-shadow: 0 4px 6px #000;
+	
+	/* les images occupent toute la largeur */
+	width:100%;
+	height:auto;
+}
+
+
 }
