@@ -72,10 +72,10 @@ p{
 
 /************** G E N E R A L    S T Y L E ***************/
 #wrapper{
-	width: 100vw;				/* occupe toute la largeur d'écran */
-	/*margin: 16px auto;*/		/* pas besoin de centrer */
+	width: 100vw;						/* occupe toute la largeur d'écran */
+	/*margin: 16px auto;*/				/* pas besoin de centrer */
 	background-color: #121212;
-	/*padding: 20px 20px;*/
+	/*padding: 20px 20px;*/				/* pas d'espacement */
 	/*box-shadow: 0 4px 6px #000;*/		/* pas d'ombre */
 
 	display:flex;
@@ -163,6 +163,7 @@ header h2{
 	width: 270px;
 }
 
+/*
 nav a {
 	color: #fff;
 	font-family: LeagueGothic, sans-serif;
@@ -172,7 +173,7 @@ nav a {
 	text-transform: uppercase;
 	text-shadow: 1px 1px 0px #000;
 }
-
+*/
 nav{
 	margin: 20px 4px 0 0;
 	float: right;
@@ -192,6 +193,8 @@ header{
 
 #menu a {
 	display: inline-block;
+	color: #fff;
+	font-size: 1.5em;
 }
 
 .topnav.responsive ul {
@@ -535,6 +538,60 @@ footer{
 /*********************** TABLETTE *****************************/
 @media screen and (min-width:600px) {
 	#wrapper{
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 1fr 100px;
+		grid-template-areas:
+		"logomenu articles"
+		"footer footer";
+	}
+
+	header {
+		grid-area: logomenu;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: center;
+
+	}
+
+	#logo, .topnav ul li a {
+		display: block;
+		text-align: center;
+	}
+
+	#menu a {
+		display: none;
+	}
+
+	.topnav {
+		width: 100%;
+	}
+
+	.topnav ul {
+		list-style: none;
+	}
+
+	.topnav ul li {
+		display: block;
+		width:100%;
+	}
+
+	#ourserv {
+		grid-area: articles;
+
+	}
+
+	#ourserv article {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	
+
+	footer {
+		grid-area: footer;
 	}
 }
 
@@ -550,6 +607,50 @@ footer{
 	.slider-wrapper {
 		display:block;
 	}
+
+    /************* LOGO & MENU ********************************/
+	#logo, nav, nav li{
+		display: inline-block;
+		vertical-align: top;
+		*display: inline;
+		zoom:1;
+	}
+	
+	#logo{
+		width: 270px;
+	}
+	
+	nav a {
+		color: #fff;
+		font-family: LeagueGothic, sans-serif;
+		text-decoration: none;
+		font-size: 1.5em;
+		margin-left: 25px;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 0px #000;
+	}
+	
+	nav{
+		margin: 20px 4px 0 0;
+		float: right;
+	}
+	
+	header{
+		margin-bottom: 25px;
+	}
+	
+	#home a#homenav, #blog a#blognav, #fullwidth a#fullwidthnav, #contact a#contactnav{
+		color: #b82924;
+	}
+	
+	.topnav ul li a {
+		display: inline-block;
+	}
+	
+	#menu a {
+		display: none;
+	}
+	
 
 	/************* H O M E    C O N T E N T *******************/
 #line h1{
