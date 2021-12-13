@@ -92,6 +92,10 @@ body{
 	text-shadow: 1px 1px 0px #000;
 }
 
+#iisrt {
+	position: relative;
+}
+
 #srt{
 	color: #f9f9f9;
 	display: block;
@@ -99,7 +103,7 @@ body{
 	position: absolute;
 	top: 14px;
 	/*left: 180px;*/
-	left: 120px;
+	left: 100px;
 	text-shadow: 1px 1px 0px #000;
 	font-size: 36px;
 	font-style: italic;
@@ -113,7 +117,7 @@ body{
 	font-weight: bold;
 	position: absolute;
 	/*left: 169px;*/
-	left: 100px;
+	left: 80px;
 	top: -3px;
 	color: #b82924;
 	display: block;
@@ -153,18 +157,19 @@ header h2{
 		margin-top: -8px;
 }
 
+/*
 #logo, nav, nav li{
 	display: inline-block;
 	vertical-align: top;
 	*display: inline;
 	zoom:1;
 }
-
+*/
 #logo{
-	width: 270px;
+	width: 250px;
 }
 
-/*
+
 nav a {
 	color: #fff;
 	font-family: LeagueGothic, sans-serif;
@@ -174,9 +179,10 @@ nav a {
 	text-transform: uppercase;
 	text-shadow: 1px 1px 0px #000;
 }
-*/
+
+
 nav{
-	margin: 20px 4px 0 0;
+	margin: 20px 0px 0 0;
 	float: right;
 }
 
@@ -193,7 +199,7 @@ header{
 }
 
 #menu a {
-	display: inline-block;
+	display: block;
 	color: #fff;
 	font-size: 1.5em;
 }
