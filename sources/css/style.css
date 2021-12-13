@@ -186,6 +186,25 @@ header{
 	color: #b82924;
 }
 
+.topnav ul li a {
+	display: none;
+}
+
+#menu a {
+	display: inline-block;
+}
+
+.topnav.responsive ul {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.topnav.responsive ul li a {
+	display: block;
+}
+
 /*************** B A N N E R    S T Y L E ******************/
 #banner{
 	position: relative;
