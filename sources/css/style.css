@@ -78,7 +78,7 @@ p{
 	/*padding: 20px 20px;*/				/* pas d'espacement */
 	/*box-shadow: 0 4px 6px #000;*/		/* pas d'ombre */
 
-	
+
 	display:flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -252,11 +252,11 @@ header{
 }
 
 
-#ourserv article{
+#derniers-articles article{
 	width: 90vw;			/* l'article occupe presque toute la largeur */
 }
 
-#ourserv article h1, #latestp article h1{
+#derniers-articles article h1, #latestp article h1{
 	font-family: LeagueGothic, sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -268,7 +268,7 @@ header{
 	margin:0;
 }
 
-#ourserv{
+#derniers-articles{
 	/* on aligne les 3 articles avec flexbox - VERTICALEMENT*/
 	display: flex;
 	flex-flow: column nowrap;
@@ -276,7 +276,7 @@ header{
 	gap: 20px;
 }
 
-#ourserv img, #latestp img{
+#derniers-articles img, #latestp img{
 	margin-bottom: 5px;
     box-shadow: 0 4px 6px #000;
 	
@@ -363,6 +363,9 @@ header{
 	width: 600px;
 	margin:0 0 40px 0;
 }
+
+/* blog */
+
 #blog li, #contact li{
 	list-style-type: square;
 }
@@ -399,6 +402,9 @@ header{
 	box-shadow: 0 4px 6px #000;
 	margin-bottom: 10px;
 }
+
+/* barre latérale */
+
 #sidebar h1, #contact #sidebar h1{
 	font-family: LeagueGothic, sans-serif;
 	font-weight: normal;
@@ -418,9 +424,11 @@ header{
 #sidebar li a:hover, #contact #sidebar li a:hover{
 	text-decoration: underline;
 }
+
 #blog aside, #contact #sidebar aside{
 	margin: 0 0 20px 0;
 }
+
 #cat, #archives, #contact #sidebar  #cat, #contact #sidebar #archives{
 	width: 130px;
 	display: inline-block;
@@ -431,6 +439,7 @@ header{
 .continue{
 	text-decoration: underline;
 }
+
 /* SINGLE POST STYLE  and CONTACT PAGE with SIDEBAR*/
 #singlepost, #sidebar, #contactpost{
 	display: inline-block;
@@ -536,7 +545,11 @@ footer{
 
 /************** MEDIA - QUERIES **********************************/
 
+/* Affichage par défaut : écran pour MOBILE, voir ci-dessus */
+
 /*********************** TABLETTE *****************************/
+/* entre 600px et 1024px */
+
 @media screen and (min-width:600px) {
 	#wrapper{
 		display: grid;
@@ -578,12 +591,12 @@ footer{
 		width:100%;
 	}
 
-	#ourserv {
+	#derniers-articles {
 		grid-area: articles;
 
 	}
 
-	#ourserv article {
+	#derniers-articles article {
 		display: block;
 		width: 100%;
 		height: auto;
@@ -595,6 +608,8 @@ footer{
 }
 
 /*********************** DESKTOP ******************************/
+/* au-dessus de 1024px */
+
 @media screen and (min-width:1024px) {
 	#wrapper{
 		width: 90%;
@@ -691,11 +706,11 @@ footer{
 }
 
 
-#ourserv article{
+#derniers-articles article{
 	width: 33%;			/* Les 3 articles se partagent toute la largeur */
 }
 
-#ourserv article h1, #latestp article h1{
+#derniers-articles article h1, #latestp article h1{
 	font-family: LeagueGothic, sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -707,7 +722,7 @@ footer{
 	margin:0;
 }
 
-#ourserv{
+#derniers-articles{
 	/*margin: 8px 0 15px 20px;*/
 	/*width: 100%;*/
 
@@ -718,7 +733,7 @@ footer{
 	gap: 20px;
 }
 
-#ourserv img, #latestp img{
+#derniers-articles img, #latestp img{
 	margin-bottom: 5px;
     box-shadow: 0 4px 6px #000;
 	
