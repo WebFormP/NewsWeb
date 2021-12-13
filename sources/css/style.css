@@ -78,6 +78,7 @@ p{
 	/*padding: 20px 20px;*/				/* pas d'espacement */
 	/*box-shadow: 0 4px 6px #000;*/		/* pas d'ombre */
 
+	
 	display:flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -587,8 +588,6 @@ footer{
 		width: 100%;
 		height: auto;
 	}
-
-	
 
 	footer {
 		grid-area: footer;
