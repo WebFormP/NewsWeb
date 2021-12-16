@@ -661,6 +661,10 @@ footer{
 		width: 90%;
 		margin: 16px auto;
 		box-shadow: 0 4px 6px #000;
+
+		/* pour annuler les display flex et grid des autres media-queries */
+		display: block;	
+		padding:20px;
 	}
 
 	/* afficher le slider en mode desktop */
@@ -669,48 +673,48 @@ footer{
 	}
 
     /************* LOGO & MENU ********************************/
-	#logo, nav, nav li{
-		display: inline-block;
-		vertical-align: top;
-		*display: inline;
-		zoom:1;
-	}
-	
 	#logo{
-		width: 270px;
+		width: 250px;
+		text-align: left;
+		display: inline-block;
 	}
 	
-	nav a {
+	.topnav {
+		margin-top: 0;
+		min-height: 100px;
+		max-width: 600px;
+		float:right;
+		position: relative;
+		top:20px;
+	}
+
+	.topnav ul {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+	}
+
+	.topnav ul li {
+		width:auto;
+	}
+
+	.topnav ul li a, nav a {
 		color: #fff;
 		font-family: LeagueGothic, sans-serif;
 		text-decoration: none;
 		font-size: 1.5em;
-		margin-left: 25px;
+		/*margin-left: 25px;*/
 		text-transform: uppercase;
 		text-shadow: 1px 1px 0px #000;
-	}
-	
-	nav{
-		margin: 20px 4px 0 0;
-		float: right;
-	}
-	
-	header{
-		margin-bottom: 25px;
-	}
-	
-	#home a#homenav, #blog a#blognav, #fullwidth a#fullwidthnav, #contact a#contactnav{
-		color: #b82924;
-	}
-	
-	.topnav ul li a {
-		display: inline-block;
 	}
 	
 	#menu a {
 		display: none;
 	}
 	
+	#home a#homenav, #blog a#blognav, #fullwidth a#fullwidthnav, #contact a#contactnav{
+		color: #b82924;
+	}
 
 	/************* H O M E    C O N T E N T *******************/
 #line h1{
