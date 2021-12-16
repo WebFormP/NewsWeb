@@ -360,6 +360,10 @@ body{
 }
 */
 
+#blog section {
+	margin-top:40px;
+}
+
 #sidebar, #contact #sidebar{
 	width: 280px;
 	margin:0 0 0 55px;
@@ -615,11 +619,16 @@ footer{
 		display: block;
 		text-align: center;
 		font-size: 2em;
+		height: 2em;
 	}
 
 	/* pour cacher le bouton hamburger */
 	#menu a, #blog #menu a {
 		display: none;
+	}
+
+	section {
+		margin-top: 40px;
 	}
 
 	#derniers-articles {
