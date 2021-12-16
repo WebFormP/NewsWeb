@@ -73,12 +73,9 @@ p{
 /************** G E N E R A L    S T Y L E ***************/
 #wrapper{
 	width: 100vw;						/* occupe toute la largeur d'écran */
-	/*margin: 16px auto;*/				/* pas besoin de centrer */
 	background-color: #121212;
-	/*padding: 20px 20px;*/				/* pas d'espacement */
-	/*box-shadow: 0 4px 6px #000;*/		/* pas d'ombre */
 
-
+	/* Affichage avec Flexbox pour le mobile */
 	display:flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -94,6 +91,7 @@ body{
 
 #iisrt {
 	position: relative;
+	/* pour conserver les positionnements absolus des 2 spans #srt et #ii, on ajoute ce positionnement relatif car cet élément englobe les 2 autres et sert donc de référence */
 }
 
 #srt{
@@ -102,8 +100,7 @@ body{
 	float: right;
 	position: absolute;
 	top: 14px;
-	/*left: 180px;*/
-	left: 100px;
+	left: 60px;
 	text-shadow: 1px 1px 0px #000;
 	font-size: 36px;
 	font-style: italic;
@@ -116,8 +113,7 @@ body{
 	font-family: LeagueGothic, sans-serif;
 	font-weight: bold;
 	position: absolute;
-	/*left: 169px;*/
-	left: 80px;
+	left: 40px;
 	top: -3px;
 	color: #b82924;
 	display: block;
@@ -133,18 +129,23 @@ body{
 }
 
 /************* L O G O   &  N A V   B A R    S T Y L E ****************/
-header h1{
+#logo{
+	width: 200px;
+	text-align: left;
+}
+
+#logo h1{
 	font-family: LeagueGothic, Impact, sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
 	font-size: 2.5em;
 	text-shadow: 1px 1px 0 #000;
 	position: relative;
-	width: 300px;
+	width: 230px;
 	margin-bottom: 2px;
 }
 
-header h2{
+#logo h2{
 	font-size: 16px;
 	font-weight: normal;
 	font-family: LeagueGothic, sans-serif;
@@ -154,65 +155,57 @@ header h2{
 }
 
 #tagline{
-		margin-top: -8px;
+	margin-top: -8px;
 }
 
-/*
-#logo, nav, nav li{
-	display: inline-block;
-	vertical-align: top;
-	*display: inline;
-	zoom:1;
-}
-*/
-#logo{
-	width: 250px;
-}
-
-
-nav a {
+.topnav ul li a {
 	color: #fff;
 	font-family: LeagueGothic, sans-serif;
 	text-decoration: none;
 	font-size: 1.5em;
-	margin-left: 25px;
 	text-transform: uppercase;
 	text-shadow: 1px 1px 0px #000;
-}
-
-
-nav{
-	margin: 20px 0px 0 0;
-	float: right;
-}
-
-header{
-	margin-bottom: 25px;
-}
-
-#home a#homenav, #blog a#blognav, #fullwidth a#fullwidthnav, #contact a#contactnav{
-	color: #b82924;
 }
 
 .topnav ul li a {
 	display: none;
 }
 
+#home a#homenav, #blog a#blognav, #fullwidth a#fullwidthnav, #contact a#contactnav{
+	color: #b82924;
+}
+
+/* pour afficher l'icône du menu hamburger */
 #menu a {
 	display: block;
 	color: #fff;
 	font-size: 1.5em;
+	margin-top: 20px;
 }
 
+/* affichage de la liste quand on appuie sur le menu hamburger */
 .topnav.responsive ul {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: center;
+	gap: 10px;
 }
 
+/* pour afficher les liens du menu hamburger quand on a appuyé sur le bouton */
 .topnav.responsive ul li a {
 	display: block;
+	height: 2em;
+	border: 2px solid white;
+	text-align: center;
+	width: 50vw;
+	line-height: 2em;
+}
+
+/* pour masquer la bordure autour du bouton hamburger quand le menu est ouvert */
+.topnav.responsive #menu a {
+	border: 2px solid transparent;
+	margin-top: 10px;
 }
 
 /*************** B A N N E R    S T Y L E ******************/
