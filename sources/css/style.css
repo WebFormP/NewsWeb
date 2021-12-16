@@ -701,7 +701,7 @@ footer{
 		display: inline-block;
 	}
 	
-	.topnav {
+	.topnav, #blog .topnav {
 		margin-top: 0;
 		min-height: 100px;
 		max-width: 600px;
@@ -710,7 +710,7 @@ footer{
 		top:20px;
 	}
 
-	.topnav ul {
+	.topnav ul, #blog .topnav ul {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: flex-end;
@@ -730,11 +730,11 @@ footer{
 		text-shadow: 1px 1px 0px #000;
 	}
 
-	#home .topnav ul li a {
+	#home .topnav ul li a, #blog .topnav ul li a {
 		display: block;
 	}
 	
-	#menu a, #home #menu a {
+	#menu a, #home #menu a, #blog #menu a {
 		display: none;
 	}
 	
