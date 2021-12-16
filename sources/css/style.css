@@ -717,80 +717,72 @@ footer{
 	}
 
 	/************* H O M E    C O N T E N T *******************/
-#line h1{
-	font-family: LeagueGothic, Impact, sans-serif;
-	font-weight: normal;
-	font-size: 30px;
-	text-transform: uppercase;
-	color: #f8f8f8;
-	text-shadow: 2px 2px 0 #000;
-	text-align:  center;
+	#line h1{
+		font-family: LeagueGothic, Impact, sans-serif;
+		font-weight: normal;
+		font-size: 30px;
+		text-transform: uppercase;
+		color: #f8f8f8;
+		text-shadow: 2px 2px 0 #000;
+		text-align:  center;
 
-	width:20%;		/* le titre occupe 20% de la largeur */
-}
+		/* affichage du titre avec de l'espace autour */
+		min-width: 200px;
+		margin: 0 20px;
+	}
 
-#line h1, .dline{
-/*	display: inline-block;
-	*display: inline;
-	zoom:1;
-	margin: 0 0 0 10px;*/
-}
+	#line h1, .dline{
+		display: inline-block;
+	}
 
-#line{
-/*	margin: 0 0 0 80px;*/
-	display: flex;				/* on aligne le titre et les 2 séparateurs avec flexbox */
-	flex-flow: row nowrap;		/* en horizontal et sur une ligne */
-	justify-content: center;	/* éléments centrés horizontalement */
-	align-items: center;		/* éléments centrés verticalement */
-}
+	#line{
+		/* on aligne le titre et les 2 séparateurs avec flexbox */
+		display: flex;				
+		flex-flow: row nowrap;		/* en horizontal et sur une ligne */
+		justify-content: center;	/* éléments centrés horizontalement */
+		align-items: center;		/* éléments centrés verticalement */
 
-.dline{
-/*	width: 312px;*/
-	width: 40%;		/* les 2 traits à gauche et à droite du titre se partagent les 80% restants (voir #line h1) */
+		height:50px;
+	}
 
-	height: 3px;
-	background-color: white;
-	/* remplacement de l'image de fond par la couleur pour plus de visibilité */
-	/*background: url('../images/bgdline.png') repeat-x ;*/
-	/*margin-bottom: 10px;*/
-}
+	.dline{
+		width: 100%;		/* les 2 traits à gauche et à droite du titre */
 
+		height: 3px;
+		background-color: white;
+	}
 
-#derniers-articles article{
-	width: 33%;			/* Les 3 articles se partagent toute la largeur */
-}
+	#derniers-articles article{
+		width: 33%;			/* Les 3 articles se partagent toute la largeur */
+		border: none;
+		padding: 0;
+	}
 
-#derniers-articles article h1, #latestp article h1{
-	font-family: LeagueGothic, sans-serif;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-size: 22px;
-	margin-bottom: 5px;
-}
+	#derniers-articles article h1, #latestp article h1{
+		font-family: LeagueGothic, sans-serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
 
-.lastarticle{
-	margin:0;
-}
+	#derniers-articles{
+		width: 100%;
 
-#derniers-articles{
-	/*margin: 8px 0 15px 20px;*/
-	/*width: 100%;*/
+		/* on aligne les 3 articles avec flexbox */
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		gap: 20px;
+	}
 
-	/* on aligne les 3 articles avec flexbox */
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
-	gap: 20px;
-}
-
-#derniers-articles img, #latestp img{
-	margin-bottom: 5px;
-    box-shadow: 0 4px 6px #000;
-	
-	/* les images occupent toute la largeur */
-	width:100%;
-	height:auto;
-}
-
+	#derniers-articles img, #latestp img{
+		margin-bottom: 5px;
+		box-shadow: 0 4px 6px #000;
+		
+		/* les images occupent toute la largeur */
+		width:100%;
+		height:auto;
+	}
 
 }
