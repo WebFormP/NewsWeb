@@ -703,12 +703,16 @@ footer{
 		font-family: LeagueGothic, sans-serif;
 		text-decoration: none;
 		font-size: 1.5em;
-		/*margin-left: 25px;*/
+		margin-left: 25px;
 		text-transform: uppercase;
 		text-shadow: 1px 1px 0px #000;
 	}
+
+	#home .topnav ul li a {
+		display: block;
+	}
 	
-	#menu a {
+	#menu a, #home #menu a {
 		display: none;
 	}
 	
