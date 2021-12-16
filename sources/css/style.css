@@ -384,9 +384,13 @@ body{
 
 #blog article{
 	/*width: 580px;*/
-	width: 100%;
+	display: block;
+	width: 95vw;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 40px;
 }
+
 #blog footer, #contact footer{
 	margin-top: 0px;
 }
@@ -461,14 +465,21 @@ body{
 }
 
 /* SINGLE POST STYLE  and CONTACT PAGE with SIDEBAR*/
+/*
 #singlepost, #sidebar, #contactpost{
 	display: inline-block;
 	vertical-align: top;
 	*display: inline;
 	zoom:1;
-}
+}*/
+/*
 #singlepost{
 	margin-right: 20px;
+}
+*/
+
+.singlepost {
+	text-align: justify;
 }
 
 /* CONTACT PAGE */
@@ -676,7 +687,7 @@ footer{
 	#blog #articles {
 		grid-area: articles;
 		margin-top: 0;
-		width: 95%;
+		width: 100%;
 
 		display: grid;
 		grid-template-columns: 1fr;
@@ -684,6 +695,14 @@ footer{
 		gap: 20px;
 	}
 
+	#blog article{
+		/*width: 580px;*/
+		display: block;
+		width: auto;
+		margin-right: 20px;
+		margin-bottom: 40px;
+	}
+	
 	footer {
 		grid-area: footer;
 		width:100%;
@@ -833,6 +852,10 @@ footer{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 20px;
+	}
+
+	#blog article {
+		width:auto;
 	}
 
 	footer {
