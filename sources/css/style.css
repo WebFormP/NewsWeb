@@ -608,16 +608,48 @@ footer{
 	#derniers-articles {
 		grid-area: articles;
 
+		margin-top: 0;
+		width: 95%;
+
+		/* placement des trois articles */
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		gap: 20px;
+		grid-template-areas: 
+		"art1  art1"
+		"art2  art3";
 	}
 
 	#derniers-articles article {
 		display: block;
 		width: 100%;
 		height: auto;
+
+		/* effacement des bordures autour des articles */
+		border: none;
+		padding: 0;
+	}
+
+	#art-1 {
+		grid-area: art1;
+	}
+
+	#art-2 {
+		grid-area: art2;
+	}
+
+	#art-3 {
+		grid-area: art3;
+	}
+
+	#art-2 .rm, #art-3 .rm {
+		width:50%;		/* bouton plus large pour articles étroits */
 	}
 
 	footer {
 		grid-area: footer;
+		width:100%;
 	}
 }
 
