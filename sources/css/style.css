@@ -72,21 +72,28 @@ p{
 
 /************** G E N E R A L    S T Y L E ***************/
 #wrapper{
-	/*width: 950px;*/
-	width: 90%;
-	margin: 16px auto;
+	width: 100vw;						/* occupe toute la largeur d'écran */
+	/*margin: 16px auto;*/				/* pas besoin de centrer */
 	background-color: #121212;
-	padding: 20px 20px;
-	box-shadow: 0 4px 6px #000;
+	/*padding: 20px 20px;*/				/* pas d'espacement */
+	/*box-shadow: 0 4px 6px #000;*/		/* pas d'ombre */
+
+
+	display:flex;
+	flex-flow: column nowrap;
+	align-items: center;
 }
 
 body{
-	/*background: url('../images/bg.png') repeat;*/
 	background-color: lightgray;
 	font-family: Source, Tahoma, sans-serif;
 	color: #fff;
 	font-size: 14px;
 	text-shadow: 1px 1px 0px #000;
+}
+
+#iisrt {
+	position: relative;
 }
 
 #srt{
@@ -96,7 +103,7 @@ body{
 	position: absolute;
 	top: 14px;
 	/*left: 180px;*/
-	left: 120px;
+	left: 100px;
 	text-shadow: 1px 1px 0px #000;
 	font-size: 36px;
 	font-style: italic;
@@ -110,7 +117,7 @@ body{
 	font-weight: bold;
 	position: absolute;
 	/*left: 169px;*/
-	left: 100px;
+	left: 80px;
 	top: -3px;
 	color: #b82924;
 	display: block;
@@ -118,6 +125,11 @@ body{
 	text-shadow: none;
 	font-style: italic;
 	letter-spacing: 2px;
+}
+
+/* masquer le slider pour les smartphones et tablettes */
+.slider-wrapper {
+	display:none;
 }
 
 /************* L O G O   &  N A V   B A R    S T Y L E ****************/
@@ -145,16 +157,18 @@ header h2{
 		margin-top: -8px;
 }
 
+/*
 #logo, nav, nav li{
 	display: inline-block;
 	vertical-align: top;
 	*display: inline;
 	zoom:1;
 }
-
+*/
 #logo{
-	width: 270px;
+	width: 250px;
 }
+
 
 nav a {
 	color: #fff;
@@ -166,8 +180,9 @@ nav a {
 	text-shadow: 1px 1px 0px #000;
 }
 
+
 nav{
-	margin: 20px 4px 0 0;
+	margin: 20px 0px 0 0;
 	float: right;
 }
 
@@ -177,6 +192,27 @@ header{
 
 #home a#homenav, #blog a#blognav, #fullwidth a#fullwidthnav, #contact a#contactnav{
 	color: #b82924;
+}
+
+.topnav ul li a {
+	display: none;
+}
+
+#menu a {
+	display: block;
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.topnav.responsive ul {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.topnav.responsive ul li a {
+	display: block;
 }
 
 /*************** B A N N E R    S T Y L E ******************/
@@ -216,55 +252,17 @@ header{
 }
 
 /************* H O M E    C O N T E N T *******************/
-#line h1{
-	font-family: LeagueGothic, Impact, sans-serif;
-	font-weight: normal;
-	font-size: 30px;
-	text-transform: uppercase;
-	color: #f8f8f8;
-	text-shadow: 2px 2px 0 #000;
-	text-align:  center;
-
-	width:20%;		/* le titre occupe 20% de la largeur */
-}
 
 #line h1, .dline{
-/*	display: inline-block;
-	*display: inline;
-	zoom:1;
-	margin: 0 0 0 10px;*/
+	display: none;
 }
 
-#line{
-/*	margin: 0 0 0 80px;*/
-	display: flex;				/* on aligne le titre et les 2 séparateurs avec flexbox */
-	flex-flow: row nowrap;		/* en horizontal et sur une ligne */
-	justify-content: center;	/* éléments centrés horizontalement */
-	align-items: center;		/* éléments centrés verticalement */
+
+#derniers-articles article{
+	width: 90vw;			/* l'article occupe presque toute la largeur */
 }
 
-.dline{
-/*	width: 312px;*/
-	width: 40%;		/* les 2 traits à gauche et à droite du titre se partagent les 80% restants (voir #line h1) */
-
-	height: 3px;
-	background-color: white;
-	/* remplacement de l'image de fond par la couleur pour plus de visibilité */
-	/*background: url('../images/bgdline.png') repeat-x ;*/
-	/*margin-bottom: 10px;*/
-}
-
-#ourserv article{
-	/*width: 275px;*/
-	width: 33%;			/* les 3 articles se partagent toute la largeur */
-	/*display: inline-block;
-	*display: inline;*/
-	/*zoom:1;
-	vertical-align: top;*/
-	/*margin: 0 38px 0 0;*/
-}
-
-#ourserv article h1, #latestp article h1{
+#derniers-articles article h1, #latestp article h1{
 	font-family: LeagueGothic, sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -276,18 +274,15 @@ header{
 	margin:0;
 }
 
-#ourserv{
-	/*margin: 8px 0 15px 20px;*/
-	/*width: 100%;*/
-
-	/* on aligne les 3 articles avec flexbox */
+#derniers-articles{
+	/* on aligne les 3 articles avec flexbox - VERTICALEMENT*/
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
 	gap: 20px;
 }
 
-#ourserv img, #latestp img{
+#derniers-articles img, #latestp img{
 	margin-bottom: 5px;
     box-shadow: 0 4px 6px #000;
 	
@@ -374,6 +369,9 @@ header{
 	width: 600px;
 	margin:0 0 40px 0;
 }
+
+/* blog */
+
 #blog li, #contact li{
 	list-style-type: square;
 }
@@ -410,6 +408,9 @@ header{
 	box-shadow: 0 4px 6px #000;
 	margin-bottom: 10px;
 }
+
+/* barre latérale */
+
 #sidebar h1, #contact #sidebar h1{
 	font-family: LeagueGothic, sans-serif;
 	font-weight: normal;
@@ -429,9 +430,11 @@ header{
 #sidebar li a:hover, #contact #sidebar li a:hover{
 	text-decoration: underline;
 }
+
 #blog aside, #contact #sidebar aside{
 	margin: 0 0 20px 0;
 }
+
 #cat, #archives, #contact #sidebar  #cat, #contact #sidebar #archives{
 	width: 130px;
 	display: inline-block;
@@ -442,6 +445,7 @@ header{
 .continue{
 	text-decoration: underline;
 }
+
 /* SINGLE POST STYLE  and CONTACT PAGE with SIDEBAR*/
 #singlepost, #sidebar, #contactpost{
 	display: inline-block;
@@ -543,4 +547,206 @@ footer{
 	margin-top: 30px;
 	/*text-align: right;*/
 	text-align: center;
+}
+
+/************** MEDIA - QUERIES **********************************/
+
+/* Affichage par défaut : écran pour MOBILE, voir ci-dessus */
+
+/*********************** TABLETTE *****************************/
+/* entre 600px et 1024px */
+
+@media screen and (min-width:600px) {
+	#wrapper{
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 1fr 100px;
+		grid-template-areas:
+		"logomenu articles"
+		"footer footer";
+	}
+
+	header {
+		grid-area: logomenu;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: center;
+
+	}
+
+	#logo, .topnav ul li a {
+		display: block;
+		text-align: center;
+	}
+
+	#menu a {
+		display: none;
+	}
+
+	.topnav {
+		width: 100%;
+	}
+
+	.topnav ul {
+		list-style: none;
+	}
+
+	.topnav ul li {
+		display: block;
+		width:100%;
+	}
+
+	#derniers-articles {
+		grid-area: articles;
+
+	}
+
+	#derniers-articles article {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	footer {
+		grid-area: footer;
+	}
+}
+
+/*********************** DESKTOP ******************************/
+/* au-dessus de 1024px */
+
+@media screen and (min-width:1024px) {
+	#wrapper{
+		width: 90%;
+		margin: 16px auto;
+		box-shadow: 0 4px 6px #000;
+	}
+
+	/* afficher le slider en mode desktop */
+	.slider-wrapper {
+		display:block;
+	}
+
+    /************* LOGO & MENU ********************************/
+	#logo, nav, nav li{
+		display: inline-block;
+		vertical-align: top;
+		*display: inline;
+		zoom:1;
+	}
+	
+	#logo{
+		width: 270px;
+	}
+	
+	nav a {
+		color: #fff;
+		font-family: LeagueGothic, sans-serif;
+		text-decoration: none;
+		font-size: 1.5em;
+		margin-left: 25px;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 0px #000;
+	}
+	
+	nav{
+		margin: 20px 4px 0 0;
+		float: right;
+	}
+	
+	header{
+		margin-bottom: 25px;
+	}
+	
+	#home a#homenav, #blog a#blognav, #fullwidth a#fullwidthnav, #contact a#contactnav{
+		color: #b82924;
+	}
+	
+	.topnav ul li a {
+		display: inline-block;
+	}
+	
+	#menu a {
+		display: none;
+	}
+	
+
+	/************* H O M E    C O N T E N T *******************/
+#line h1{
+	font-family: LeagueGothic, Impact, sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #f8f8f8;
+	text-shadow: 2px 2px 0 #000;
+	text-align:  center;
+
+	width:20%;		/* le titre occupe 20% de la largeur */
+}
+
+#line h1, .dline{
+/*	display: inline-block;
+	*display: inline;
+	zoom:1;
+	margin: 0 0 0 10px;*/
+}
+
+#line{
+/*	margin: 0 0 0 80px;*/
+	display: flex;				/* on aligne le titre et les 2 séparateurs avec flexbox */
+	flex-flow: row nowrap;		/* en horizontal et sur une ligne */
+	justify-content: center;	/* éléments centrés horizontalement */
+	align-items: center;		/* éléments centrés verticalement */
+}
+
+.dline{
+/*	width: 312px;*/
+	width: 40%;		/* les 2 traits à gauche et à droite du titre se partagent les 80% restants (voir #line h1) */
+
+	height: 3px;
+	background-color: white;
+	/* remplacement de l'image de fond par la couleur pour plus de visibilité */
+	/*background: url('../images/bgdline.png') repeat-x ;*/
+	/*margin-bottom: 10px;*/
+}
+
+
+#derniers-articles article{
+	width: 33%;			/* Les 3 articles se partagent toute la largeur */
+}
+
+#derniers-articles article h1, #latestp article h1{
+	font-family: LeagueGothic, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+
+.lastarticle{
+	margin:0;
+}
+
+#derniers-articles{
+	/*margin: 8px 0 15px 20px;*/
+	/*width: 100%;*/
+
+	/* on aligne les 3 articles avec flexbox */
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	gap: 20px;
+}
+
+#derniers-articles img, #latestp img{
+	margin-bottom: 5px;
+    box-shadow: 0 4px 6px #000;
+	
+	/* les images occupent toute la largeur */
+	width:100%;
+	height:auto;
+}
+
+
 }

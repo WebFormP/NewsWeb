@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
@@ -20,18 +19,20 @@
 		<![endif]-->
 
 		<title>NewsWeb - Accueil</title>
+		
+		<!-- Librairies d'icones -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
 	<body id="home">
 		<div id="wrapper">
-		
-			<!--__--__--__--__--__--  L O G O  &   N A V    B A R --__--___--__--__--__-->
-			<header>
-				<div id="logo">
+			<!--__--__--__--__--__--  L O G O   --__--___--__--__--__-->
+			<div id="logo">
 				<h1>News <span id="iisrt"><span id="ii">II</span>  <span id="srt">WEB</span></span></h1>
 				<div id="tagline">
 					<h2>On a faim d'infos !</h2>
 				</div>
+<<<<<<< HEAD:sources/index.html
 				</div>
 				<nav>
 					<ul>
@@ -42,6 +43,22 @@
 					</ul>
 				</nav>
 			</header>
+=======
+			</div>
+
+			<!--__--__--__--__--__--  N A V    B A R --__--___--__--__--__-->
+			<nav class="topnav" id="topnav">
+				<ul>
+					<li id="menu">
+						<a href="javascript:void(0);" class="icon" onclick="hamburger()"><i class="fa fa-bars"></i></a>
+					</li>
+					<li><a href="index_desktop.html" id="homenav">Accueil</a></li>
+					<li><a href="blog.html" id="blognav">Les articles</a></li>
+					<li><a href="contact.html" id="contact">Contact</a></li>
+					<li><a href="#" id="admin">Admin</a></li>
+				</ul>
+			</nav>
+>>>>>>> d602a3b78bcd132f540f078fd0e3495b384ade2c:sources/index_desktop.html
 			
 			<!--__--__--__--__--  T H E    S L I D E R --__--__--__--___--__--__--__-->
 			<div class="slider-wrapper theme-default">
@@ -65,20 +82,20 @@
 					<h1>Nos derniers articles</h1>
 					<div class="dline"></div>
 				</div>
-				<div id="ourserv">
-					<article>
+				<div id="derniers-articles">
+					<article id="art-1">
 						<h1>Article 1</h1>
 						<img src="images/1.jpg" alt="" />
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet.</p>
 						<a href="fullwidth.html" class="rm">En savoir plus...</a>
 					</article>
-					<article>
+					<article id="art-2">
 						<h1>Article 2</h1>
 						<img src="images/2.jpg" alt="" />
 						<p>Consectetuer adipiscing elit. Suspendisse enim elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit.</p>
 						<a href="fullwidth.html" class="rm">En savoir plus...</a>
 					</article>
-					<article class="lastarticle">
+					<article id="art-3">
 						<h1>Article 3</h1>
 						<img src="images/3.jpg" alt="" />
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit enim.</p>
@@ -91,11 +108,18 @@
 				<p>Design modifié pour un exercice de mise en page HTML/CSS</p>
 				<p>Copyright &copy 2013 Source X by Youssef Nassim and Zakariya Lhamri, design from <a href="http://geeksband.com">Geeksband.com</a>. All Rights Reserved.</p>
 			</footer>
-		</div>			
+		</div>
+		
+		<!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+		<script>
+		function hamburger() {
+			var x = document.getElementById("topnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+		</script>
 	</body>
-</html>
-		
-		
-			
-    
-    
+</html>   
