@@ -584,7 +584,7 @@ footer{
 		padding-left: 20px;
 	}
 
-	.topnav {
+	.topnav, #blog .topnav {
 		width: 100%;
 		grid-area: menu;
 		min-height: 150px;
@@ -600,12 +600,12 @@ footer{
 	}
 */
 
-	.topnav ul li {
+	.topnav ul li, #blog .topnav ul li {
 		display: block;
 		width:100%;
 	}
 
-	.topnav ul li a {
+	.topnav ul li a, #blog .topnav ul li a {
 		display: block;
 		text-align: center;
 		font-size: 2em;
@@ -656,6 +656,17 @@ footer{
 
 	#art-2 .rm, #art-3 .rm {
 		width:50%;		/* bouton plus large pour articles étroits */
+	}
+
+	#blog #articles {
+		grid-area: articles;
+		margin-top: 0;
+		width: 95%;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 20px;
 	}
 
 	footer {
