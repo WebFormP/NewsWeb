@@ -358,7 +358,7 @@ body{
 #blog section, #contact section{
 	margin: 30px 0 0 10px;
 }
-#sidebar, #contat #sidebar{
+#sidebar, #contact #sidebar{
 	width: 280px;
 	margin:0 0 0 55px;
 }
@@ -372,6 +372,7 @@ body{
 #blog li, #contact li{
 	list-style-type: square;
 }
+
 #blog article{
 	width: 580px;
 	margin-bottom: 40px;
@@ -553,45 +554,55 @@ footer{
 /*********************** TABLETTE *****************************/
 /* entre 600px et 1024px */
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:600px) and (max-width:1023px) {
 	#wrapper{
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		grid-template-rows: 1fr 100px;
+		grid-template-rows: 80px auto 100px;
+		justify-items: start;
+		align-items: start;
 		grid-template-areas:
-		"logomenu articles"
+		"logo   logo"
+		"menu   articles"
 		"footer footer";
 	}
 
-	header {
-		grid-area: logomenu;
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: flex-start;
-		align-items: center;
-
-	}
-
-	#logo, .topnav ul li a {
-		display: block;
-		text-align: center;
-	}
-
-	#menu a {
-		display: none;
+	#logo {
+		grid-area: logo;
+		text-align: left;
+		padding-left: 20px;
 	}
 
 	.topnav {
 		width: 100%;
+		grid-area: menu;
+		min-height: 150px;
+		margin-top: 40px;
+		/* menu reste en place quand le contenu défile */
+		position: sticky;
+		top:10vh;
 	}
 
+/*	
 	.topnav ul {
 		list-style: none;
 	}
+*/
 
 	.topnav ul li {
 		display: block;
 		width:100%;
+	}
+
+	.topnav ul li a {
+		display: block;
+		text-align: center;
+		font-size: 2em;
+	}
+
+	/* pour cacher le bouton hamburger */
+	#menu a {
+		display: none;
 	}
 
 	#derniers-articles {
